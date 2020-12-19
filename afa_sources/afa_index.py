@@ -57,7 +57,7 @@ print(f"""
             </ol>
         </fieldset>
         <fieldset>
-            <legend>Book information</legend>
+            <legend>Book status</legend>
             <p>Total closed pages: {afa_log.pages_status['current_page']}</p>
             <p>Not registered closed pages: {len(afa_log.pages_status['not_registered_closed_pages'])} =>
 """)

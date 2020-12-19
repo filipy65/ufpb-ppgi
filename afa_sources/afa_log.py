@@ -8,7 +8,7 @@ http_request = cgi.FieldStorage()
 html_page_head = log_info = ""
 page_to_manage = log_title = None
 hash_algorithm = "sha256"
-page_directory = "afa_pages/"
+page_directory = "pages/"
 file_extension = ".json"
 
 
@@ -310,14 +310,14 @@ if http_request.getvalue('register_page'):
             dlt_page_file = page_directory + str(dlt_page_id) + file_extension
             dlt_page = open_file(dlt_page_file)
             dlt_register = afa_dlt.register_page(pages_status, dlt_page)
-            log_info += f"<br>313"
+            #log_info += f"<br>313"
             log_info += dlt_register[1]
             if dlt_register[0]:
-                log_info += f"<br>316"
+                #log_info += f"<br>316"
                 update_file(dlt_page_file, dlt_register[2])
-                log_info += f"<br>318"
+                #log_info += f"<br>318"
                 pages_status = dlt_register[3]
-                log_info += f"<br>320"
+                #log_info += f"<br>320"
                 update_file(pages_status_file, pages_status)
         else:
             log_info += f"<br>Page {dlt_page_id} is not pending for register."

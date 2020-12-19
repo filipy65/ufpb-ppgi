@@ -10,7 +10,7 @@ def confirm_page_info(dlt_page):
     try:
         blockchain_transaction_info = json.load(urllib.request.urlopen("https://blockstream.info/testnet/api/tx/" + dlt_page['anchors']['txid']))
         info_to_confirm = ('j@' + dlt_page['anchors']['hash']).encode('utf-8')
-        return bool(info_to_confirm.hex() == blockchain_transaction_info['vout'][0]['scriptpubkey'] and blockchain_transaction_info['status']['confirmed'])
+        return bool((info_to_confirm.hex() == blockchain_transaction_info['vout'][0]['scriptpubkey']) and blockchain_transaction_info['status']['confirmed'])
     except:
         return False
 
