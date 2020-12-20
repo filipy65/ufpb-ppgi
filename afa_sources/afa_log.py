@@ -8,7 +8,7 @@ http_request = cgi.FieldStorage()
 html_page_head = log_info = ""
 page_to_manage = log_title = None
 hash_algorithm = "sha256"
-page_directory = "pages/"
+page_directory = "afa_pages/"
 file_extension = ".json"
 
 
