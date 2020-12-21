@@ -1,0 +1,10 @@
+[Unit]
+Description=Executes a stand alone Python CGI-HTTP server to imadiate serves AFA 
+
+[Service]
+ExecStart=python3.8 -m http.server --cgi 8888 -d /var/archivematica/sharedDirectory/www
+Type=oneshot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target 
